@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+    <%- include('../partials/head'); %>
+
+    <body class="container">
+
+        <%- include('../partials/header'); %>
+
+        <main>
+
+            <div class="jumbotron">
+                <h1>Planeta Pet</h1>
+                <p>Melhores parceiros </p>
+                <p><%= subtitle %></p>
+            </div>
+            <ul>
+                <% infos.forEach(function(info){ %>
+                    <li>
+                        <strong><%=info.title %></strong><%= info.message %>
+                    </li>
+                <% }) %>
+            </ul>
+            
+        </main> 
+
+        <%- include('../partials/link'); %>
+        
+    </body>
+</html>

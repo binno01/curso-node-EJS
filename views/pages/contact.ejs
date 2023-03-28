@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<%- include('../partials/head/'); %>
+
+    <body class="container">
+        
+        <%- include('../partials/header', {pagina: 'Contato'}); %>
+
+        <main>
+            
+            <div class="jumbotron">
+                <h1>Contato</h1>
+                <p>Estamos disponíveis 24 horas po dia.</p>
+                <p class="text-right">
+                    <a href="mailto:"> binno_01@msn.com.br</a>
+                </p>
+            </div>
+            <ul>
+                <% contacts.forEach(function(contact){ %>
+                    <li>
+                        <strong><%=contact.name %>: </strong><%= contact.tel %>
+                    </li>
+                <% }) %>
+            </ul>
+
+        </main>
+        <%- include('../partials/link'); %>
+        <%- include('../partials/footer');%>
+
+    </body>
+</html>

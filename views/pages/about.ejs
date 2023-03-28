@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<%- include('../partials/head'); %>
+
+    <body class="container">
+        
+        <%- include('../partials/header', {pagina: 'Sobre'}); %>
+
+        <main>
+            
+            <div class="jumbotron">
+                <h1>Sobre nós</h1>
+                <p>Viemos para dar mais alegria para nossos donos.</p>
+            </div>
+            <ul>
+                <% animals.forEach(function(animal){ %>
+                    <li>
+                        <strong><%=animal.name %>: </strong><%= animal.especie %>
+                    </li>
+                    <li type="circle">
+                        <%= animal.raca %>
+                    </li>
+                    <li type="none">
+                        <%= animal.paws %>
+                    </li>
+
+                <% }) %>
+            </ul>
+
+        </main>
+
+    <%- include('../partials/link'); %>
+    
+</body>
+
+</html>
